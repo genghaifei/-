@@ -1,5 +1,7 @@
 .PHONY:all
-all:cstring  findNumber fillBlank
+all:cstring  findNumber fillBlank queue
+
+queue:queue.cpp
 
 fillBlank:fillBlank.cpp
 	g++ -o $@ $^ -gdwarf-2
@@ -11,4 +13,4 @@ singleton:singleton.cpp
 	g++ -o $@ $^ -lpthread -gdwarf-2
 .PHONY:clean
 clean:
-	-rm -rf cstring singleton findNumber fillBlank
+	-rm -rf cstring singleton findNumber fillBlank queue
