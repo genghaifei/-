@@ -26,7 +26,6 @@ class singleton;
 
 pthread_mutex_t Mutex = PTHREAD_MUTEX_INITIALIZER;
 
-singleton singleton::*instance = NULL;
 
 class singleton
 {
@@ -57,6 +56,8 @@ class singleton
 		static singleton *instance;
 };
 
+
+singleton* singleton::instance;
 
 int main()
 {
