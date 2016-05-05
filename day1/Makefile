@@ -1,5 +1,5 @@
 .PHONY:all
-all:cstring  findNumber fillBlank queue
+all:cstring  findNumber fillBlank queue singleton
 
 queue:queue.cpp
 
