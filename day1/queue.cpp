@@ -17,10 +17,13 @@ class queue
 		}
 		int deleteHead()
 		{
-			while ( !st1.empty())
+			if ( !st2.empty())
 			{
-				st2.push(st1.top());
-				st1.pop();
+				while ( !st1.empty())
+				{
+					st2.push(st1.top());
+					st1.pop();
+				}
 			}
 			int ret = st2.top();
 			st2.pop();
